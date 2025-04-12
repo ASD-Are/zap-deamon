@@ -1,8 +1,8 @@
-# Use official OWASP ZAP stable image
-FROM owasp/zap2docker-stable
+# Use the official OWASP ZAP stable image from GitHub Container Registry
+FROM ghcr.io/zaproxy/zaproxy:stable
 
-# Expose ZAP port
+# Expose ZAP daemon port
 EXPOSE 8080
 
-# Run ZAP in daemon mode with no API key
+# Start ZAP in daemon mode
 CMD ["zap.sh", "-daemon", "-host", "0.0.0.0", "-port", "8080", "-config", "api.disablekey=true"]

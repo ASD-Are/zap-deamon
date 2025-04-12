@@ -1,5 +1,5 @@
 # Use official ZAP Docker image
-FROM owasp/zap2docker-stable
+FROM ghcr.io/zaproxy/zaproxy:stable
 
 # Expose the port ZAP runs on
 EXPOSE 8080
